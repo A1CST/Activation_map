@@ -1,0 +1,99 @@
+{
+  "n_elements": 10,
+  "total_dim": 320,
+  "train_accuracy": 88.28333333333333,
+  "heldout_accuracy": 85.51666666666667,
+  "time_s": 47.58627152442932,
+  "history": [
+    {
+      "element": 1,
+      "accuracy": 79.74999237060547,
+      "baseline": 73.65,
+      "improvement": 79.74999237060547,
+      "total_dim": 32,
+      "generations": 2008,
+      "expression": "(2.42 * ((0 * x) - sin(((x / x) - (e / x)))))"
+    },
+    {
+      "element": 2,
+      "accuracy": 79.0,
+      "baseline": 56.62499847412109,
+      "improvement": -0.7499923706054688,
+      "total_dim": 64,
+      "generations": 836,
+      "expression": "(((x * (x + x)) + pi) * (x - (exp((x - 0.523)) * (x / neg(x)))))"
+    },
+    {
+      "element": 3,
+      "accuracy": 81.5,
+      "baseline": 67.74999923706055,
+      "improvement": 1.7500076293945312,
+      "total_dim": 96,
+      "generations": 1292,
+      "expression": "(x - ((log((0 / 2.26)) - x) * ((x - -1) * -1)))"
+    },
+    {
+      "element": 4,
+      "accuracy": 82.75,
+      "baseline": 72.19999847412109,
+      "improvement": 1.25,
+      "total_dim": 128,
+      "generations": 882,
+      "expression": "(x * (((x - 2) * x) + exp(abs(x))))"
+    },
+    {
+      "element": 5,
+      "accuracy": 82.5,
+      "baseline": 73.34999771118164,
+      "improvement": -0.25,
+      "total_dim": 160,
+      "generations": 1108,
+      "expression": "(1.55 * (x - ((log((0 / x)) * x) * (-1 - sin(x)))))"
+    },
+    {
+      "element": 6,
+      "accuracy": 81.75,
+      "baseline": 72.77499923706054,
+      "improvement": -1.0,
+      "total_dim": 192,
+      "generations": 1224,
+      "expression": "(1.55 - (x - ((log((0 / 2.26)) - x) * x)))"
+    },
+    {
+      "element": 7,
+      "accuracy": 83.5,
+      "baseline": 73.525,
+      "improvement": 0.75,
+      "total_dim": 224,
+      "generations": 1544,
+      "expression": "(1.55 * (x - ((exp(e) - 0) / x)))"
+    },
+    {
+      "element": 8,
+      "accuracy": 82.5,
+      "baseline": 73.74999923706055,
+      "improvement": -1.0,
+      "total_dim": 256,
+      "generations": 2344,
+      "expression": "(1.55 * (x - ((log((0 / 2)) - (x + (2 / x))) * ((-0.313 * x) / exp((x - 0.523))))))"
+    },
+    {
+      "element": 9,
+      "accuracy": 82.75,
+      "baseline": 74.35,
+      "improvement": -0.75,
+      "total_dim": 288,
+      "generations": 2356,
+      "expression": "(((x / 0) * sin(x)) + (x + sin(cos(2.67))))"
+    },
+    {
+      "element": 10,
+      "accuracy": 83.0,
+      "baseline": 72.4749984741211,
+      "improvement": -0.5,
+      "total_dim": 320,
+      "generations": 831,
+      "expression": "((((x - 2) / (0 * pi)) * x) - x)"
+    }
+  ]
+}

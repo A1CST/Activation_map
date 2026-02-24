@@ -1,0 +1,297 @@
+[18:19:59] ======================================================================
+[18:19:59] ACTIVATION GALAXY EXPLORER — FULL PIPELINE
+[18:19:59] ======================================================================
+[18:19:59]   Device: cuda
+[18:19:59]   GPU: NVIDIA RTX PRO 6000 Blackwell Server Edition
+[18:19:59]   GPU memory: 102.0 GB
+[18:19:59]   Quick mode: True
+[18:19:59]   Output: results/galaxy_20260224_181959
+[18:19:59] 
+[18:19:59] PHASE 1: Loading datasets (auto-downloading if needed)
+[18:19:59] --------------------------------------------------
+[18:20:00]   Loading MNIST...
+[18:20:01]     MNIST: 48000 train, 12000 eval, dim=784, classes=10
+[18:20:01]   Loading FashionMNIST...
+[18:20:02]     FashionMNIST: 48000 train, 12000 eval, dim=784, classes=10
+[18:20:02]   Loading EMNIST_Digits...
+[18:20:03]     EMNIST_Digits: 48000 train, 12000 eval, dim=784, classes=10
+[18:20:03]   Loading CIFAR10...
+[18:20:08]     CIFAR10: 40000 train, 10000 eval, dim=3072, classes=10
+[18:20:08]   Loaded 4 datasets: ['MNIST', 'FashionMNIST', 'EMNIST_Digits', 'CIFAR10']
+[18:20:08] 
+[18:20:08] PHASE 2: Collecting existing catalogs
+[18:20:08] --------------------------------------------------
+[18:20:08]   Found catalog: CIFAR10 -> results/experiment_20260224_171809/CIFAR10/catalog.json
+[18:20:09]     Loaded 5127 non-degenerate activations
+[18:20:09]   Found catalog: EMNIST_Digits -> results/experiment_20260224_171809/EMNIST_Digits/catalog.json
+[18:20:09]     Loaded 3881 non-degenerate activations
+[18:20:09]   Found catalog: FashionMNIST -> results/experiment_20260224_171809/FashionMNIST/catalog.json
+[18:20:10]     Loaded 5194 non-degenerate activations
+[18:20:10]   Total existing activations: 14202
+[18:20:10] 
+[18:20:10] PHASE 3: Evolving activations per dataset
+[18:20:10] --------------------------------------------------
+[18:20:10] 
+  === Evolving for MNIST (dim=784, classes=10) ===
+[18:20:10]     Seeding with known activations:
+[18:20:10]       identity                  -> 71.3%
+[18:20:10]       abs                       -> 40.7%
+[18:20:10]       neg                       -> 71.4%
+[18:20:10]       square                    -> 40.1%
+[18:20:10]       cube                      -> 56.5%
+[18:20:10]       exp                       -> 51.6%
+[18:20:10]       sin                       -> 51.5%
+[18:20:10]       cos                       -> 35.2%
+[18:20:10]       relu                      -> 62.7%
+[18:20:10]       leaky_relu                -> 62.7%
+[18:20:10]       sigmoid                   -> 69.3%
+[18:20:10]       tanh                      -> 68.5%
+[18:20:10]       softplus                  -> 67.1%
+[18:20:10]       softsign                  -> 66.5%
+[18:20:10]       swish                     -> 62.5%
+[18:20:10]       gelu_approx               -> 63.1%
+[18:20:10]       mish_approx               -> 63.9%
+[18:20:10]       elu_approx                -> 68.6%
+[18:20:10]       selu_approx               -> 68.8%
+[18:20:10]       hard_sigmoid              -> 66.2%
+[18:20:10]       hard_swish                -> 64.9%
+[18:20:10]       gaussian                  -> 27.9%
+[18:20:10]       laplacian                 -> 28.5%
+[18:20:10]       narrow_gaussian           -> 25.3%
+[18:20:10]       x_sin_x                   -> 29.0%
+[18:20:10]       x_cos_x                   -> 38.7%
+[18:20:10]       sin_sq                    -> 16.9%
+[18:20:10]       cos_sq                    -> 22.0%
+[18:20:10]       neg_relu                  -> 61.5%
+[18:20:10]       sharp_softsign            -> 58.8%
+[18:20:10]       tanh_relu                 -> 59.1%
+[18:20:10]       x_exp_neg_abs             -> 53.9%
+[18:20:10]       sin_gate                  -> 51.8%
+[18:20:10]       log_cosh                  -> 42.2%
+[18:20:10]       bipolar_sigmoid           -> 68.9%
+[18:20:10]       squared_relu              -> 50.5%
+[18:20:10]     GP Evolution (60 pop x 30 gens)
+[18:20:11]       Initial best: 71.9%, catalog=67
+[18:20:14]       gen   25/30 | best=73.9% | catalog=419 | 3s
+[18:20:14]       gen   30/30 | best=73.9% | catalog=491 | 4s
+[18:20:14]     Random exploration (100 trees)
+[18:20:14]     CATALOG: 535 unique | 247 above 20% | best=72.1%
+[18:20:14]     Saved catalog_MNIST.json (535 activations)
+[18:20:14] 
+  === Evolving for FashionMNIST (dim=784, classes=10) ===
+[18:20:14]     Seeding with known activations:
+[18:20:14]       identity                  -> 73.7%
+[18:20:14]       abs                       -> 59.3%
+[18:20:14]       neg                       -> 74.1%
+[18:20:14]       square                    -> 54.9%
+[18:20:14]       cube                      -> 66.5%
+[18:20:14]       exp                       -> 62.7%
+[18:20:14]       sin                       -> 58.5%
+[18:20:14]       cos                       -> 49.6%
+[18:20:14]       relu                      -> 69.7%
+[18:20:14]       leaky_relu                -> 70.4%
+[18:20:14]       sigmoid                   -> 72.0%
+[18:20:14]       tanh                      -> 71.5%
+[18:20:14]       softplus                  -> 73.1%
+[18:20:14]       softsign                  -> 72.4%
+[18:20:14]       swish                     -> 69.2%
+[18:20:14]       gelu_approx               -> 69.7%
+[18:20:14]       mish_approx               -> 70.5%
+[18:20:14]       elu_approx                -> 72.7%
+[18:20:14]       selu_approx               -> 73.4%
+[18:20:14]       hard_sigmoid              -> 71.3%
+[18:20:14]       hard_swish                -> 71.9%
+[18:20:14]       gaussian                  -> 42.6%
+[18:20:14]       laplacian                 -> 42.1%
+[18:20:14]       narrow_gaussian           -> 34.5%
+[18:20:14]       x_sin_x                   -> 38.6%
+[18:20:14]       x_cos_x                   -> 53.2%
+[18:20:14]       sin_sq                    -> 15.4%
+[18:20:15]       cos_sq                    -> 21.7%
+[18:20:15]       neg_relu                  -> 68.8%
+[18:20:15]       sharp_softsign            -> 68.2%
+[18:20:15]       tanh_relu                 -> 69.3%
+[18:20:15]       x_exp_neg_abs             -> 63.2%
+[18:20:15]       sin_gate                  -> 59.3%
+[18:20:15]       log_cosh                  -> 58.4%
+[18:20:15]       bipolar_sigmoid           -> 73.4%
+[18:20:15]       squared_relu              -> 62.8%
+[18:20:15]     GP Evolution (60 pop x 30 gens)
+[18:20:15]       Initial best: 74.1%, catalog=67
+[18:20:17]       gen   25/30 | best=75.4% | catalog=382 | 2s
+[18:20:17]       gen   30/30 | best=75.4% | catalog=444 | 2s
+[18:20:17]     Random exploration (100 trees)
+[18:20:17]     CATALOG: 491 unique | 248 above 20% | best=74.5%
+[18:20:17]     Saved catalog_FashionMNIST.json (491 activations)
+[18:20:17] 
+  === Evolving for EMNIST_Digits (dim=784, classes=10) ===
+[18:20:17]     Seeding with known activations:
+[18:20:17]       identity                  -> 74.1%
+[18:20:17]       abs                       -> 44.8%
+[18:20:17]       neg                       -> 72.5%
+[18:20:17]       square                    -> 44.4%
+[18:20:17]       cube                      -> 63.5%
+[18:20:17]       exp                       -> 53.8%
+[18:20:17]       sin                       -> 52.9%
+[18:20:17]       cos                       -> 38.5%
+[18:20:17]       relu                      -> 65.8%
+[18:20:17]       leaky_relu                -> 66.4%
+[18:20:17]       sigmoid                   -> 70.7%
+[18:20:17]       tanh                      -> 68.9%
+[18:20:17]       softplus                  -> 69.1%
+[18:20:17]       softsign                  -> 70.4%
+[18:20:17]       swish                     -> 66.2%
+[18:20:17]       gelu_approx               -> 65.2%
+[18:20:17]       mish_approx               -> 67.5%
+[18:20:17]       elu_approx                -> 72.3%
+[18:20:17]       selu_approx               -> 72.2%
+[18:20:17]       hard_sigmoid              -> 69.1%
+[18:20:17]       hard_swish                -> 68.4%
+[18:20:17]       gaussian                  -> 32.4%
+[18:20:17]       laplacian                 -> 30.8%
+[18:20:18]       narrow_gaussian           -> 26.5%
+[18:20:18]       x_sin_x                   -> 28.1%
+[18:20:18]       x_cos_x                   -> 43.8%
+[18:20:18]       sin_sq                    -> 15.8%
+[18:20:18]       cos_sq                    -> 21.1%
+[18:20:18]       neg_relu                  -> 63.8%
+[18:20:18]       sharp_softsign            -> 62.4%
+[18:20:18]       tanh_relu                 -> 63.3%
+[18:20:18]       x_exp_neg_abs             -> 55.3%
+[18:20:18]       sin_gate                  -> 51.9%
+[18:20:18]       log_cosh                  -> 45.2%
+[18:20:18]       bipolar_sigmoid           -> 73.8%
+[18:20:18]       squared_relu              -> 54.6%
+[18:20:18]     GP Evolution (60 pop x 30 gens)
+[18:20:18]       Initial best: 74.9%, catalog=60
+[18:20:20]       gen   25/30 | best=75.9% | catalog=380 | 3s
+[18:20:21]       gen   30/30 | best=76.6% | catalog=429 | 3s
+[18:20:21]     Random exploration (100 trees)
+[18:20:21]     CATALOG: 467 unique | 280 above 20% | best=74.9%
+[18:20:21]     Saved catalog_EMNIST_Digits.json (467 activations)
+[18:20:21] 
+  === Evolving for CIFAR10 (dim=3072, classes=10) ===
+[18:20:21]     Seeding with known activations:
+[18:20:21]       identity                  -> 25.9%
+[18:20:21]       abs                       -> 17.1%
+[18:20:21]       neg                       -> 27.5%
+[18:20:21]       square                    -> 17.3%
+[18:20:21]       cube                      -> 25.7%
+[18:20:21]       exp                       -> 22.5%
+[18:20:21]       sin                       -> 21.2%
+[18:20:21]       cos                       -> 15.5%
+[18:20:21]       relu                      -> 25.9%
+[18:20:21]       leaky_relu                -> 24.8%
+[18:20:21]       sigmoid                   -> 25.4%
+[18:20:21]       tanh                      -> 25.4%
+[18:20:21]       softplus                  -> 25.2%
+[18:20:21]       softsign                  -> 26.8%
+[18:20:21]       swish                     -> 24.7%
+[18:20:21]       gelu_approx               -> 25.2%
+[18:20:21]       mish_approx               -> 25.2%
+[18:20:21]       elu_approx                -> 25.5%
+[18:20:21]       selu_approx               -> 25.8%
+[18:20:21]       hard_sigmoid              -> 23.8%
+[18:20:21]       hard_swish                -> 23.8%
+[18:20:21]       gaussian                  -> 11.9%
+[18:20:21]       laplacian                 -> 12.9%
+[18:20:21]       narrow_gaussian           -> 13.4%
+[18:20:21]       x_sin_x                   -> 13.7%
+[18:20:21]       x_cos_x                   -> 19.6%
+[18:20:21]       sin_sq                    -> 10.9%
+[18:20:21]       cos_sq                    -> 11.5%
+[18:20:21]       neg_relu                  -> 25.6%
+[18:20:21]       sharp_softsign            -> 24.8%
+[18:20:21]       tanh_relu                 -> 25.1%
+[18:20:21]       x_exp_neg_abs             -> 22.9%
+[18:20:21]       sin_gate                  -> 20.1%
+[18:20:21]       log_cosh                  -> 17.8%
+[18:20:21]       bipolar_sigmoid           -> 25.5%
+[18:20:22]       squared_relu              -> 23.3%
+[18:20:22]     GP Evolution (60 pop x 30 gens)
+[18:20:22]       Initial best: 27.5%, catalog=60
+[18:20:24]       gen   25/30 | best=28.8% | catalog=401 | 2s
+[18:20:25]       gen   30/30 | best=29.1% | catalog=461 | 3s
+[18:20:25]     Random exploration (100 trees)
+[18:20:25]     CATALOG: 501 unique | 161 above 20% | best=27.9%
+[18:20:25]     Saved catalog_CIFAR10.json (501 activations)
+[18:20:25] 
+  Phase 3 complete. Per-dataset catalog sizes:
+[18:20:25]     MNIST: 535
+[18:20:25]     FashionMNIST: 491
+[18:20:25]     EMNIST_Digits: 467
+[18:20:25]     CIFAR10: 501
+[18:20:25] 
+[18:20:25] PHASE 4: Merging and deduplicating all catalogs
+[18:20:25] --------------------------------------------------
+[18:20:25]   Total before dedup: 16196
+[18:20:26]   Removed 2726 duplicates in 0.7s
+[18:20:26]   Total after dedup: 13470
+[18:20:26] 
+[18:20:26] PHASE 5: Cross-scoring all activations on all datasets
+[18:20:26] --------------------------------------------------
+[18:20:26]   Cross-scoring on MNIST...
+[18:20:27]     MNIST: scored 13470 activations in 0.8s
+[18:20:27]   Cross-scoring on FashionMNIST...
+[18:20:27]     FashionMNIST: scored 13470 activations in 0.8s
+[18:20:27]   Cross-scoring on EMNIST_Digits...
+[18:20:28]     EMNIST_Digits: scored 13470 activations in 0.8s
+[18:20:28]   Cross-scoring on CIFAR10...
+[18:20:29]     CIFAR10: scored 13470 activations in 1.1s
+[18:20:29] 
+[18:20:29] PHASE 6: Running basis expansion tests on all datasets
+[18:20:29] --------------------------------------------------
+[18:20:29] 
+  Testing basis expansion on MNIST...
+[18:21:16]     MNIST: held-out=92.8%, train=94.8%, dim=320
+[18:21:16] 
+  Testing basis expansion on FashionMNIST...
+[18:22:04]     FashionMNIST: held-out=85.5%, train=88.3%, dim=320
+[18:22:04] 
+  Testing basis expansion on EMNIST_Digits...
+[18:22:46]     EMNIST_Digits: held-out=94.3%, train=95.8%, dim=288
+[18:22:46] 
+  Testing basis expansion on CIFAR10...
+[18:23:21]     CIFAR10: held-out=36.5%, train=51.5%, dim=224
+[18:23:21] 
+[18:23:22] PHASE 7: Saving master catalog and rendering galaxy
+[18:23:22] --------------------------------------------------
+[18:23:23]   Saved master_catalog.json (13470 activations)
+[18:23:23]   Rendering galaxy with 13470 activations...
+[18:23:23]   Computing t-SNE layout...
+[18:23:41]   Saved galaxy map: results/galaxy_20260224_181959/galaxy_map.png
+[18:23:41] 
+================================================================================
+[18:23:41] GALAXY EXPLORER SUMMARY
+[18:23:41] ================================================================================
+[18:23:41]   Total activations: 13470
+[18:23:41]   Existing catalogs collected: 14202
+[18:23:41]   Evolved for MNIST: 535
+[18:23:41]   Evolved for FashionMNIST: 491
+[18:23:41]   Evolved for EMNIST_Digits: 467
+[18:23:41]   Evolved for CIFAR10: 501
+[18:23:41]   Total time: 222s (3.7 min)
+[18:23:41] 
+[18:23:41]   BASIS EXPANSION TEST RESULTS:
+[18:23:41]   Dataset         |   Dim |   Train | Held-out
+[18:23:41]   ---------------------------------------------
+[18:23:41]   MNIST           |   320 |   94.8% |    92.8%
+[18:23:41]   FashionMNIST    |   320 |   88.3% |    85.5%
+[18:23:41]   EMNIST_Digits   |   288 |   95.8% |    94.3%
+[18:23:41]   CIFAR10         |   224 |   51.5% |    36.5%
+[18:23:41] 
+[18:23:41]   TOP 10 GENERALIST ACTIVATIONS:
+[18:23:41]     #1: mean= 62.9  x
+[18:23:41]     #2: mean= 62.6  (x + sin(sin((x / exp((x + pi))))))
+[18:23:41]     #3: mean= 62.5  (((sin(x) / (2 * pi)) * neg((x - -1))) + (x + l...
+[18:23:41]     #4: mean= 62.5  log(exp(x))
+[18:23:41]     #5: mean= 62.5  (x + (x + (x + cos((e * x)))))
+[18:23:41]     #6: mean= 62.5  (neg(0.455) - (neg(0.5) - (((x - 0.245) * e) - ...
+[18:23:41]     #7: mean= 62.4  (x + log(cos(cos(((x * x) * abs(0.908))))))
+[18:23:41]     #8: mean= 62.4  (x + (x + sin((log(x) * x))))
+[18:23:41]     #9: mean= 62.4  (abs(cos(x)) + (x + x))
+[18:23:41]     #10: mean= 62.4  (0.0658 + ((x * neg(pi)) - (exp((x / 2)) - ((x ...
+[18:23:41] 
+  Output directory: results/galaxy_20260224_181959
+[18:23:41]   Galaxy PNG: results/galaxy_20260224_181959/galaxy_map.png
+[18:23:41] DONE.
